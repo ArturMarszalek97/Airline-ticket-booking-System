@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineTicketBookingSystem", "AirlineTicketBookingSystem\AirlineTicketBookingSystem.csproj", "{A8288EFA-EAC0-4B88-A2BF-BA936280DFBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineTicketBookingSystemModel", "AirlineTicketBookingSystemModel\AirlineTicketBookingSystemModel.csproj", "{4AC0F720-44FA-4DD1-9386-0AD0457726E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8288EFA-EAC0-4B88-A2BF-BA936280DFBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8288EFA-EAC0-4B88-A2BF-BA936280DFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8288EFA-EAC0-4B88-A2BF-BA936280DFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8288EFA-EAC0-4B88-A2BF-BA936280DFBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC0F720-44FA-4DD1-9386-0AD0457726E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC0F720-44FA-4DD1-9386-0AD0457726E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC0F720-44FA-4DD1-9386-0AD0457726E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC0F720-44FA-4DD1-9386-0AD0457726E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4137276D-4305-4F2B-BE49-04792BCCF7EF}
+	EndGlobalSection
+EndGlobal
