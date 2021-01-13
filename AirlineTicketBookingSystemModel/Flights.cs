@@ -15,5 +15,7 @@ namespace AirlineTicketBookingSystemModel
         public AirPort airPortTo { get; set; }
         public int price { get; set; }
         public List<string> details { get; set; }
+        public List<Link> links { get; set; }
+        public int code { get; set; }
     }
 }

@@ -66,5 +66,11 @@
                 <Button Name="SearchTicket" Grid.Column="2" VerticalAlignment="Center" Margin="5" Click="SearchTicket_Click">szukaj</Button>
             </Grid>
         </GroupBox>
+        <Button Name="LogOut" HorizontalAlignment="Left" Margin="787,68,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="LogOut_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Logout" />
+                <TextBlock Text="wyloguj" HorizontalAlignment="Center" FontSize="10"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

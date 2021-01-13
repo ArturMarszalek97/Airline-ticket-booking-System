@@ -1,0 +1,51 @@
+﻿<Window x:Class="AirlineTicketBookingSystem.UserTicketsManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:AirlineTicketBookingSystem"
+        mc:Ignorable="d"
+        Title="UserTicketsManagement" Height="450" Width="1110" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid Name="listView" HorizontalAlignment="Left" Margin="10" SelectionMode="Single" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False" Height="450" VerticalAlignment="Top" Width="874" MouseDoubleClick="listView_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Wylot z:" Binding="{Binding Path=flight.airPortFrom.country}" Width="115"/>
+                <DataGridTextColumn Header="" Binding="{Binding Path=flight.airPortFrom.city}" Width="115"/>
+                <DataGridTextColumn Header="Przylot do:" Binding="{Binding Path=flight.airPortTo.country}" Width="115"/>
+                <DataGridTextColumn Header="" Binding="{Binding Path=flight.airPortTo.city}" Width="115"/>
+                <DataGridTextColumn Header="Data wylotu" Binding="{Binding Path=flight.date}" Width="150"/>
+                <DataGridTextColumn Header="Godzina wylotu" Binding="{Binding Path=flight.time}" Width="150"/>
+                <DataGridTextColumn Header="Cena" Binding="{Binding Path=flight.price}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="DeleteTicket" HorizontalAlignment="Left" Margin="894,260,0,0" VerticalAlignment="Top" Width="190" Height="55" Click="DeleteFlight_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="DeleteForever" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Usuń bilet" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <TextBox Name="login" HorizontalAlignment="Left" Margin="894,85,0,0" VerticalAlignment="Top" Height="auto" Width="190"/>
+        <Label Content="Wpisz login, aby wyświetlić bilety:" FontWeight="Bold" HorizontalAlignment="Left" Margin="894,49,0,0" VerticalAlignment="Top"/>
+        <Button Name="SearchTickets" HorizontalAlignment="Left" Margin="894,129,0,0" VerticalAlignment="Top" Width="190" Height="34" Click="SearchFlights_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="DatabaseSearch" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Szukaj biletów" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <Label Content="Liczba wszystkich biletów:" FontWeight="Bold" HorizontalAlignment="Left" Margin="916,181,0,0" VerticalAlignment="Top"/>
+        <Label Name="count" Content="" FontWeight="Bold" HorizontalAlignment="Left" Margin="980,205,0,0" VerticalAlignment="Top"/>
+        <Button Name="Back" HorizontalAlignment="Left" Margin="903,10,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="Back_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="ArrowLeftBoldCircleOutline" />
+                <TextBlock Text="powrót" HorizontalAlignment="Center" FontSize="10"/>
+            </StackPanel>
+        </Button>
+        <Button Name="LogOut" HorizontalAlignment="Left" Margin="1009,10,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="LogOut_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Logout" />
+                <TextBlock Text="wyloguj" HorizontalAlignment="Center" FontSize="10"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

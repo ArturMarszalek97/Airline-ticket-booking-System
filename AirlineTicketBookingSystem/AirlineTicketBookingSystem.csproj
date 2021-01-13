@@ -72,7 +72,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdministratorPanel.xaml.cs">
+      <DependentUpon>AdministratorPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientHelper.cs" />
+    <Compile Include="CreateFlight.xaml.cs">
+      <DependentUpon>CreateFlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsView.xaml.cs">
+      <DependentUpon>DetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditFlight.xaml.cs">
+      <DependentUpon>EditFlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FlightManagement.xaml.cs">
+      <DependentUpon>FlightManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedUserHelper.cs" />
     <Compile Include="NewPassword.xaml.cs">
       <DependentUpon>NewPassword.xaml</DependentUpon>
     </Compile>
@@ -92,6 +108,29 @@
     <Compile Include="SummaryView.xaml.cs">
       <DependentUpon>SummaryView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserTicketsManagement.xaml.cs">
+      <DependentUpon>UserTicketsManagement.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdministratorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateFlight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditFlight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FlightManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SummaryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserTicketsManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

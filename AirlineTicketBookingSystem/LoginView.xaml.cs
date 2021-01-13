@@ -37,12 +37,23 @@ namespace AirlineTicketBookingSystem
                 if (!responseMessage.IsSuccessStatusCode)
                     throw new ExceptionModel(response.details[0]);
 
+                LoggedUserHelper.loggedUser = response;
                 ClientHelper.SetHeaders(response.tokenType, response.accessToken);
 
-                MainWindow window = new MainWindow();
-                window.Show();
+                if (response.roles[0] == "ROLE_ADMIN")
+                {
+                    AdministratorPanel administratorPanel = new AdministratorPanel();
+                    administratorPanel.Show();
 
-                this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MainWindow window = new MainWindow();
+                    window.Show();
+
+                    this.Close();
+                }
             }
             catch (ExceptionModel ex)
             {

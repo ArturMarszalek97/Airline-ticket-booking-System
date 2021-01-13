@@ -363,5 +363,13 @@ namespace AirlineTicketBookingSystem
                 return null;
             }
         }
+
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            LoginView loginView = new LoginView();
+            loginView.Show();
+
+            this.Close();
+        }
     }
 }

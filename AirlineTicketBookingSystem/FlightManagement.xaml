@@ -1,0 +1,61 @@
+﻿<Window x:Class="AirlineTicketBookingSystem.FlightManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:AirlineTicketBookingSystem"
+        mc:Ignorable="d"
+        Title="FlightManagement" Height="510" Width="1120" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid Name="listView" HorizontalAlignment="Left" Margin="10" SelectionMode="Single" IsReadOnly="True" SelectionUnit="FullRow" AutoGenerateColumns="False" Height="450" VerticalAlignment="Top" Width="874" MouseDoubleClick="listView_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Wylot z lotniska" Binding="{Binding Path=airPortFrom.airPortName}" Width="215"/>
+                <DataGridTextColumn Header="Przylot na lotnisko" Binding="{Binding Path=airPortTo.airPortName}" Width="215"/>
+                <DataGridTextColumn Header="Data wylotu" Binding="{Binding Path=date}" Width="150"/>
+                <DataGridTextColumn Header="Godzina wylotu" Binding="{Binding Path=time}" Width="150"/>
+                <DataGridTextColumn Header="Cena" Binding="{Binding Path=price}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="CreateFlight" HorizontalAlignment="Left" Margin="904,243,0,0" VerticalAlignment="Top" Width="190" Height="55" Click="CreateFlight_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="AddCircleOutline" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Utwórz lot" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <Button Name="DeleteFlight" HorizontalAlignment="Left" Margin="904,310,0,0" VerticalAlignment="Top" Width="190" Height="55" Click="DeleteFlight_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="DeleteForever" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Usuń lot" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <DatePicker Name="date" HorizontalAlignment="Left" Margin="904,57,0,0" VerticalAlignment="Top" Height="44" Width="190"/>
+        <Label Content="Wybierz datę, aby wyszukać loty:" FontWeight="Bold" HorizontalAlignment="Left" Margin="904,40,0,0" VerticalAlignment="Top"/>
+        <Button Name="SearchFlights" HorizontalAlignment="Left" Margin="904,120,0,0" VerticalAlignment="Top" Width="190" Height="34" Click="SearchFlights_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="DatabaseSearch" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Szukaj lotów" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <Label Content="Liczba lotów tego dnia:" FontWeight="Bold" HorizontalAlignment="Left" Margin="926,172,0,0" VerticalAlignment="Top"/>
+        <Label Name="count" Content="" FontWeight="Bold" HorizontalAlignment="Left" Margin="985,196,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="EditFlight" HorizontalAlignment="Left" Margin="904,380,0,0" VerticalAlignment="Top" Width="190" Height="55" Click="EditFlight_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="SquareEditOutline" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Text="Edytuj lot" FontSize="15" VerticalAlignment="Center" />
+            </StackPanel>
+        </Button>
+        <Button Name="LogOut" HorizontalAlignment="Left" Margin="1009,11,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="LogOut_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Logout" />
+                <TextBlock Text="wyloguj" HorizontalAlignment="Center" FontSize="10"/>
+            </StackPanel>
+        </Button>
+        <Button Name="Back" HorizontalAlignment="Left" Margin="904,11,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="Back_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="ArrowLeftBoldCircleOutline" />
+                <TextBlock Text="powrót" HorizontalAlignment="Center" FontSize="10"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
