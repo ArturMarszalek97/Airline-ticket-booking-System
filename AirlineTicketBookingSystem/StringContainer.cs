@@ -2,37 +2,59 @@
 {
     public class StringContainer
     {
-        public const string Authorization = "http://localhost:8080/api/auth/signin"; // POST
+        public static string port = string.Empty;
 
-        public const string Register = "http://localhost:8080/api/auth/signup"; // POST
+        public StringContainer(string port)
+        {
+            Authorization = $"http://localhost:{port}/api/auth/signin"; // POST
+            Register = $"http://localhost:{port}/api/auth/signup"; // POST
+            DepartingPlanes = $"http://localhost:{port}/countries/departingPlanes"; // GET
+            AirplanesArriving = $"http://localhost:{port}/countries/airplanesArriving?Country={0}&City={1}"; // GET
+            Flights = $"http://localhost:{port}/flights/locations?countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
+            Tickets = $"http://localhost:{port}/tickets"; // POST
+            Reservation = $"http://localhost:{port}/tickets/reservation/{0}"; // GET
+            RemindPasssword = $"http://localhost:{port}/users/sendEmail?email={0}"; // PATCH
+            Code = $"http://localhost:{port}/users?code={0}&email={1}"; // GET
+            ChangePassword = $"http://localhost:{port}/users/resetPassword?password={0}&email={1}"; // POST
+            FlightsFromDate = $"http://localhost:{port}/flights?date={0}"; // GET
+            CreateFlight = $"http://localhost:{port}/flights"; // POST
+            UserTickets = $"http://localhost:{port}/tickets?username={0}"; // GET
+            CheckFlight = $"http://localhost:{port}/flights/{0}/tickets"; // GET
+            EditFlight = $"http://localhost:{port}/flights/{0}"; // POST
+            ShowDeleteFlight = $"http://localhost:{port}/flights/{0}"; // GET or DELETE
+        }
 
-        public const string DepartingPlanes = "http://localhost:8080/countries/departingPlanes"; // GET
+        public static string Authorization = $"http://localhost:{port}/api/auth/signin"; // POST
 
-        public const string AirplanesArriving = "http://localhost:8080/countries/airplanesArriving?Country={0}&City={1}"; // GET
+        public static string Register = $"http://localhost:{port}/api/auth/signup"; // POST
 
-        public const string Flights = "http://localhost:8080/flights/locations?countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
+        public static string DepartingPlanes = $"http://localhost:{port}/countries/departingPlanes"; // GET
 
-        public const string Tickets = "http://localhost:8080/tickets"; // POST
+        public static string AirplanesArriving = $"http://localhost:{port}/countries/airplanesArriving?Country={0}&City={1}"; // GET
 
-        public const string Reservation = "http://localhost:8080/tickets/reservation/{0}"; // GET
+        public static string Flights = $"http://localhost:{port}/flights/locations?countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
 
-        public const string RemindPasssword = "http://localhost:8080/users/sendEmail?email={0}"; // PATCH
+        public static string Tickets = $"http://localhost:{port}/tickets"; // POST
 
-        public const string Code = "http://localhost:8080/users?code={0}&email={1}"; // GET
+        public static string Reservation = $"http://localhost:{port}/tickets/reservation/{0}"; // GET
 
-        public const string ChangePassword = "http://localhost:8080/users/resetPassword?password={0}&email={1}"; // POST
+        public static string RemindPasssword = $"http://localhost:{port}/users/sendEmail?email={0}"; // PATCH
 
-        public const string FlightsFromDate = "http://localhost:8080/flights?date={0}"; // GET
+        public static string Code = $"http://localhost:{port}/users?code={0}&email={1}"; // GET
 
-        public const string CreateFlight = "http://localhost:8080/flights"; // POST
+        public static string ChangePassword = $"http://localhost:{port}/users/resetPassword?password={0}&email={1}"; // POST
 
-        public const string UserTickets = "http://localhost:8080/tickets?username={0}"; // GET
+        public static string FlightsFromDate = $"http://localhost:{port}/flights?date={0}"; // GET
 
-        public const string CheckFlight = "http://localhost:8080/flights/{0}/tickets"; // GET
+        public static string CreateFlight = $"http://localhost:{port}/flights"; // POST
 
-        public const string EditFlight = "http://localhost:8080/flights/{0}"; // POST
+        public static string UserTickets = $"http://localhost:{port}/tickets?username={0}"; // GET
 
-        public const string ShowDeleteFlight = "http://localhost:8080/flights/{0}"; // GET or DELETE
+        public static string CheckFlight = $"http://localhost:{port}/flights/{0}/tickets"; // GET
+
+        public static string EditFlight = $"http://localhost:{port}/flights/{0}"; // POST
+
+        public static string ShowDeleteFlight = $"http://localhost:{port}/flights/{0}"; // GET or DELETE
 
         // Test in HTTP monitor
         //public const string Authorization = "http://localhost:9999/api/auth/signin"; // POST

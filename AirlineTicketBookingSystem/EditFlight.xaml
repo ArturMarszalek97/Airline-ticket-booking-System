@@ -83,6 +83,6 @@
                 <TextBox Name="airplaneNameTo" Grid.Row="2" Grid.Column="1"/>
             </Grid>
         </GroupBox>
-        <Button Name="Edit" Content="Utwórz"  Grid.Row="1"  Grid.ColumnSpan="2" Margin="245,162.4,248.6,-41.6" HorizontalAlignment="Center" Width="300" Click="Edit_Click" />
+        <Button Name="Edit" Content="Zatwierdź"  Grid.Row="1"  Grid.ColumnSpan="2" Margin="245,162.4,248.6,-41.6" HorizontalAlignment="Center" Width="300" Click="Edit_Click" />
     </Grid>
 </Window>

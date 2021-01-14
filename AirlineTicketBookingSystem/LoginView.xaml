@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AirlineTicketBookingSystem"
         mc:Ignorable="d"
-        Title="Panel logowania" Height="255" Width="350" WindowStartupLocation="CenterScreen">
+        Title="Panel logowania" Height="300" Width="350" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="101,32,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="101,64,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top"/>
-        <TextBox Name="login" HorizontalAlignment="Left" Height="26" Margin="141,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox Name="password" HorizontalAlignment="Left" Margin="141,54,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Button Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="126,101,0,0" VerticalAlignment="Top" Width="106" Cursor="Wait" Click="loginButton_Click"/>
-        <Button Name="registerButton" Content="Zarejestruj się" HorizontalAlignment="Left" Margin="154,180,0,0" VerticalAlignment="Top" Width="160" Click="registerButton_Click"/>
-        <Label Content="Nie masz konta?" FontWeight="Bold" HorizontalAlignment="Left" Margin="49,185,0,0" VerticalAlignment="Top"/>
-        <Button Name="remindPassword" Content="Przypomnij hasło" Foreground="Black" FontSize="10" FontWeight="Bold" Background="White" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Width="324" Height="23" Click="remindPassword_Click"/>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="101,59,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="101,91,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top"/>
+        <TextBox Name="login" HorizontalAlignment="Left" Height="26" Margin="141,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="password" HorizontalAlignment="Left" Margin="141,81,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="126,128,0,0" VerticalAlignment="Top" Width="106" Cursor="Wait" Click="loginButton_Click"/>
+        <Button Name="registerButton" Content="Zarejestruj się" HorizontalAlignment="Left" Margin="154,207,0,0" VerticalAlignment="Top" Width="160" Click="registerButton_Click"/>
+        <Label Content="Nie masz konta?" FontWeight="Bold" HorizontalAlignment="Left" Margin="49,212,0,0" VerticalAlignment="Top"/>
+        <Button Name="remindPassword" Content="Przypomnij hasło" Foreground="Black" FontSize="10" FontWeight="Bold" Background="White" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Width="324" Height="23" Click="remindPassword_Click"/>
+        <TextBlock Name="PortName" HorizontalAlignment="Left" FontWeight="Bold" Margin="101,28,0,0" TextWrapping="Wrap" Text="Port:" VerticalAlignment="Top"/>
+        <TextBox x:Name="Port" TextChanged="Port_TextChanged" HorizontalAlignment="Left" Height="26" Margin="141,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

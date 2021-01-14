@@ -5,6 +5,7 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace AirlineTicketBookingSystem
 {
@@ -20,12 +21,45 @@ namespace AirlineTicketBookingSystem
             InitializeComponent();
             ClientHelper.InitHttpClient();
             this.client = ClientHelper.GetClient();
+            ShowPortField();
+        }
+
+        private void ShowPortField()
+        {
+            if (!string.IsNullOrEmpty(StringContainer.port))
+            {
+                this.PortName.Visibility = Visibility.Hidden;
+                this.Port.Visibility = Visibility.Hidden;
+
+                this.login.IsEnabled = true;
+                this.password.IsEnabled = true;
+                this.loginButton.IsEnabled = true;
+                this.remindPassword.IsEnabled = true;
+                this.registerButton.IsEnabled = true;
+            }
+            else
+            {
+                this.PortName.Visibility = Visibility.Visible;
+                this.Port.Visibility = Visibility.Visible;
+
+                this.login.IsEnabled = false;
+                this.password.IsEnabled = false;
+                this.loginButton.IsEnabled = false;
+                this.remindPassword.IsEnabled = false;
+                this.registerButton.IsEnabled = false;
+            }
         }
 
         private async void loginButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                if (string.IsNullOrEmpty(StringContainer.port))
+                {
+                    StringContainer.port = this.Port.Text;
+                    var sc = new StringContainer(this.Port.Text);
+                }
+                
                 var json = JsonConvert.SerializeObject(new AuthModel(this.login.Text, this.password.Password));
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -79,6 +113,22 @@ namespace AirlineTicketBookingSystem
             registrationView.Show();
 
             this.Close();
+        }
+
+        private void Port_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (Convert.ToInt32(textBox.Text) >= 1000 && Convert.ToInt32(textBox.Text) <= 9999)
+            {
+                StringContainer.port = this.Port.Text;
+                var sc = new StringContainer(this.Port.Text);
+
+                this.login.IsEnabled = true;
+                this.password.IsEnabled = true;
+                this.loginButton.IsEnabled = true;
+                this.remindPassword.IsEnabled = true;
+                this.registerButton.IsEnabled = true;
+            }
         }
     }
 }
