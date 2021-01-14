@@ -13,7 +13,7 @@
             Flights = $"http://localhost:{port}/flights/locations?"; Flights += "countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
             Tickets = $"http://localhost:{port}/tickets"; // POST
             Reservation = $"http://localhost:{port}/tickets/reservation"; Reservation += "/{0}"; // GET
-            RemindPasssword = $"http://localhost:{port}/users/sendEmail?"; RemindPasssword += "email ={0}"; // PATCH
+            RemindPasssword = $"http://localhost:{port}/users/sendEmail?"; RemindPasssword += "email={0}"; // PATCH
             Code = $"http://localhost:{port}/users?"; Code += "code={0}&email={1}"; // GET
             ChangePassword = $"http://localhost:{port}/users/resetPassword?"; ChangePassword += "password={0}&email={1}"; // POST
             FlightsFromDate = $"http://localhost:{port}/"; FlightsFromDate += "flights?date={0}"; // GET
