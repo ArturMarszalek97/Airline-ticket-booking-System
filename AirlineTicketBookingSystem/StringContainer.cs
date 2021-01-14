@@ -9,19 +9,19 @@
             Authorization = $"http://localhost:{port}/api/auth/signin"; // POST
             Register = $"http://localhost:{port}/api/auth/signup"; // POST
             DepartingPlanes = $"http://localhost:{port}/countries/departingPlanes"; // GET
-            AirplanesArriving = $"http://localhost:{port}/countries/airplanesArriving?Country={0}&City={1}"; // GET
-            Flights = $"http://localhost:{port}/flights/locations?countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
+            AirplanesArriving = $"http://localhost:{port}/countries/airplanesArriving?"; AirplanesArriving += "Country={0}&City={1}"; // GET
+            Flights = $"http://localhost:{port}/flights/locations?"; Flights += "countryFrom={0}&cityFrom={1}&countryTo={2}&cityTo={3}&date={4}"; //GET
             Tickets = $"http://localhost:{port}/tickets"; // POST
-            Reservation = $"http://localhost:{port}/tickets/reservation/{0}"; // GET
-            RemindPasssword = $"http://localhost:{port}/users/sendEmail?email={0}"; // PATCH
-            Code = $"http://localhost:{port}/users?code={0}&email={1}"; // GET
-            ChangePassword = $"http://localhost:{port}/users/resetPassword?password={0}&email={1}"; // POST
-            FlightsFromDate = $"http://localhost:{port}/flights?date={0}"; // GET
+            Reservation = $"http://localhost:{port}/tickets/reservation"; Reservation += "/{0}"; // GET
+            RemindPasssword = $"http://localhost:{port}/users/sendEmail?"; RemindPasssword += "email ={0}"; // PATCH
+            Code = $"http://localhost:{port}/users?"; Code += "code={0}&email={1}"; // GET
+            ChangePassword = $"http://localhost:{port}/users/resetPassword?"; ChangePassword += "password={0}&email={1}"; // POST
+            FlightsFromDate = $"http://localhost:{port}/"; FlightsFromDate += "flights?date={0}"; // GET
             CreateFlight = $"http://localhost:{port}/flights"; // POST
-            UserTickets = $"http://localhost:{port}/tickets?username={0}"; // GET
-            CheckFlight = $"http://localhost:{port}/flights/{0}/tickets"; // GET
-            EditFlight = $"http://localhost:{port}/flights/{0}"; // POST
-            ShowDeleteFlight = $"http://localhost:{port}/flights/{0}"; // GET or DELETE
+            UserTickets = $"http://localhost:{port}/"; UserTickets += "tickets?username={0}"; // GET
+            CheckFlight = $"http://localhost:{port}/"; CheckFlight += "flights/{0}/tickets"; // GET
+            EditFlight = $"http://localhost:{port}/"; EditFlight += "flights/{0}"; // POST
+            ShowDeleteFlight = $"http://localhost:{port}/"; ShowDeleteFlight += "flights/{0}"; // GET or DELETE
         }
 
         public static string Authorization = $"http://localhost:{port}/api/auth/signin"; // POST
